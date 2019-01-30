@@ -30,7 +30,7 @@ public class Player_area extends AppCompatActivity {
         final Computer computer = new Computer();
         final TextView textView = (TextView) findViewById(R.id.txt);
         final TextView[][] board =gridview.getTextViews();
-       int numb =1;
+    
 
         for(int i =0 ; i< tipas.getPadejo(); i++ ) {
             if (tipas.getPadejo() <= 1) {
@@ -64,7 +64,7 @@ public class Player_area extends AppCompatActivity {
 
                 if(tipas.getPadejo()<=1){
                     tipas.setKeturvietis(grid);
-
+                    textView.setText("Padekite trivieti: ");
 
                 }else if(tipas.getPadejo()>=2 && tipas.getPadejo()<=3){
                     tipas.setTrivietis(grid);
