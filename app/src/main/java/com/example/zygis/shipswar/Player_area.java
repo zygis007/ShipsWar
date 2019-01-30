@@ -30,29 +30,9 @@ public class Player_area extends AppCompatActivity {
         final Computer computer = new Computer();
         final TextView textView = (TextView) findViewById(R.id.txt);
         final TextView[][] board =gridview.getTextViews();
-    
-
-        for(int i =0 ; i< tipas.getPadejo(); i++ ) {
-            if (tipas.getPadejo() <= 1) {
-                textView.setText("Padekite keturvieti: ");
 
 
-            } else if (tipas.getPadejo() >= 2 && tipas.getPadejo() <= 3) {
-                textView.setText("Padekite trivieti: ");
 
-
-            } else if (tipas.getPadejo() > 3 && tipas.getPadejo() <= 6) {
-                textView.setText("Padekite dvivieti: ");
-
-
-            } else if (tipas.getPadejo() > 6 && tipas.getPadejo() <= 10) {
-                textView.setText("Padekite vienvieti: ");
-
-            } else {
-                textView.setText("Laivai sudeti galite zaisti.");
-                break;
-            }
-        }
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,15 +48,15 @@ public class Player_area extends AppCompatActivity {
 
                 }else if(tipas.getPadejo()>=2 && tipas.getPadejo()<=3){
                     tipas.setTrivietis(grid);
-
+                    textView.setText("Padekite trivieti: ");
 
                 }else if(tipas.getPadejo()>3 && tipas.getPadejo()<=6) {
                     tipas.setDvivietis(grid);
-
+                    textView.setText("Padekite dvivieti: ");
 
                 } else if(tipas.getPadejo()>6 && tipas.getPadejo()<=10){
                     tipas.setVienvietis(grid);
-
+                    textView.setText("Padekite vienvieti: ");
 
                 }else {
                     textView.setText("Laivai sudeti, galite zaisti");
